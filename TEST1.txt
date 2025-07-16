@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Image Cards with Hover Effect</title>
+  <style>
+    /* General Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 2rem;
+    }
+
+    /* Navbar */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      padding: 1rem;
+      background-color: #333;
+      color: white;
+    }
+    .navbar-left .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+      text-decoration: none;
+      color: #fff;
+    }
+    .navbar-right {
+      display: flex;
+      gap: 1rem;
+    }
+    .nav-btn {
+      padding: 0.5rem 1rem;
+      background-color: #444;
+      border: none;
+      border-radius: 4px;
+      color: white;
+      cursor: pointer;
+    }
+    .nav-btn:hover {
+      background-color: #555;
+    }
+
+    /* Content Section */
+    .content-wrapper {
+      display: flex;
+      justify-content: flex-end;
+      width: 100%;
+      padding: 2rem;
+    }
+    .right-content {
+      max-width: 500px;
+      text-align: right;
+    }
+    .right-content h2 {
+      margin-bottom: 1rem;
+      font-size: 1.75rem;
+      font-weight: bold;
+      color: #000;
+    }
+    .right-content p {
+      margin-bottom: 0.5rem;
+      color: #333;
+    }
+    .learn-more-btn {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.5rem 1rem;
+      background-color: #e74c3c;
+      color: white;
+      text-decoration: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    .learn-more-btn:hover {
+      background-color: #c0392b;
+    }
+
+    /* Gradient and Sandalwood Rectangles */
+    .gradient-shade {
+      width: 100%;
+      height: 100px;
+      background: linear-gradient(to bottom, #e74c3c, #a45a52);
+    }
+    .red-sandalwood {
+      width: 100%;
+      height: 200px;
+      background-color: #a45a52;
+    }
+
+    /* Card Container */
+    .card-container {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-top: 2rem;
+      width: 100%;
+      max-width: 1200px;
+    }
+
+    /* Individual Card */
+    .card {
+      width: 18%;
+      background-color: white;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+    .card:hover img {
+      transform: scale(1.1);
+    }
+    .card:hover {
+      transform: translateY(-10px);
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="navbar-left">
+      <a href="#" class="logo">MyBrand</a>
+    </div>
+    <div class="navbar-right">
+      <button class="nav-btn">Button 1</button>
+      <button class="nav-btn">Button 2</button>
+      <button class="nav-btn">Button 3</button>
+      <button class="nav-btn">Button 4</button>
+    </div>
+  </nav>
+
+  <div class="content-wrapper">
+    <div class="right-content">
+      <h2>Bold Black Heading</h2>
+      <p>First line of descriptive content goes here.</p>
+      <p>Second line continues the message.</p>
+      <p>Third line wraps up the brief info.</p>
+      <a href="#" class="learn-more-btn">Learn More</a>
+    </div>
+  </div>
+
+  <div class="gradient-shade"></div>
+  <div class="red-sandalwood"></div>
+
+  <!-- Card Section -->
+  <div class="card-container">
+    <div class="card">
+      <img src="krems-7619682_1280.jpg"alt="FOOD">
+    </div>
+    <div class="card">
+      <img src="architecture-8803583_1280.jpg" alt="Image 2">
+    </div>
+    <div class="card">
+      <img src="church-7784705_1280.jpg" alt="Image 3">
+    </div>
+    <div class="card">
+      <img src="mosque-8547944_1280.jpg" alt="Image 4">
+    </div>
+    <div class="card">
+      <img src="freiberg-3394376_1280.jpg" alt="Image 5">
+    </div>
+  </div>
+
+</body>
+</html>
